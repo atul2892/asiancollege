@@ -1,0 +1,90 @@
+{%extends "home.html"%}
+{%load static%}
+{%block body%}
+
+                    <div class="right_panel">
+                        <div style="width:50%; float:left; margin:0px; padding:0px;">
+                            <h2>Contact Us</h2>
+                            <p style="font-size:14px;">
+                                Get In Touch<br>
+                                <br>
+                            </p>
+                            <b>
+                                <h2 style="font-size:20px; float:left; margin:0px; padding:0px;">Asian Law College</h2>
+                            </b><br><br><br>
+                            <p style="font-size:14px;">
+                                <b>Locations </b><br />
+                                Harora, Shahbad Road, Bilari, <br />
+                                Distt Moradabad 244111 (UP)<br />
+                                <br />
+                                <b>Email Us</b> <br />
+                                info@asiancollegebilari.com<br />
+                                admission@ asiancollegebilari.com<br />
+                                <br />
+                                <b>Phone Us</b> <br />
+                                +91 9997986999, +91- 9807046666<br />
+                                <br />
+                                <b>Website<br />
+                                </b> www.asiancollegebilari.com
+                            </p>
+                        </div>
+                        <div style="float:left; width:40%; margin:0px; padding:0px;">
+                            <center>
+                                <h2>Enquiry Form</h2>
+                            </center>
+                            <center>
+                                <p></p>
+
+                                {%for i in messages%}
+                                <script>
+                                    alert("{{i}}")
+                                </script>
+                                {%endfor%}
+
+                                <form method="post" action="">
+                                    {%csrf_token%}
+                                    <font style="color:#000000;">Category: </font><br>
+                                    <select name="cat" style="width:70%;" required>
+                                        <option value="Student">Student</option>
+                                        <option value="Guardian">Guardian</option>
+                                        <option value="Faculty">Faculty</option>
+                                        <option value="Staff">Staff</option>
+                                        <option value="Others">Others</option>
+                                    </select><br>
+                                    <font style="color:#000000;">Name: </font><br> 
+                                    <input type="text" name="name" required />
+                                    <br>
+                                    <font style="color:#000000;">Address: </font><br>
+                                    <input type="text"
+                                        name="address" required />
+                                    <br>
+                                    <font style="color:#000000;">Contact No: </font><br>
+                                    <input type="tel"
+                                        name="phone" pattern="[0-9]{10}" required />
+                                    <br>
+                                    <font style="color:#000000;">E-mail Address: </font><br>
+                                    <input type="email"
+                                        name="email" required />
+                                    <br>
+                                    <font style="color:#000000;">Subject:</font><br>
+                                    <input type="text" name="subject" required />
+                                    <br>
+                                    <font style="color:#000000;">Message: </font><br>
+                                    <input type="text"
+                                        name="message" required />
+                                    <br><br>
+                                    <input type="hidden" name="data" value="1">
+
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </center>
+                        </div>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d1791358.849158811!2d76.93139358843011!3d28.727083566189666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.7091225!2d77.2749958!4m5!1s0x390ae71ad8e63b3d%3A0x78e44a471c9967f!2sAsian%20Group%20of%20college%20Bilari!3m2!1d28.6331499!2d78.8310987!5e0!3m2!1sen!2sin!4v1644217056435!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="clr"></div>
+                </div>
+            </div>
+
+            {%endblock%}

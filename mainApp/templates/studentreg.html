@@ -1,0 +1,113 @@
+{%extends "home.html"%}
+{%load static%}
+{%block body%}
+
+
+                    <div class="right_panel">
+
+                        <center>
+                            <h2>ASIAN LAW COLLEGE<br>
+                                College Code: 614
+                            </h2>
+                        </center>
+                        <center>
+                            <p>Online Application Form</p>
+                        </center>
+
+                            {%for i in messages%}
+                                <script>
+                                    alert("{{i}}")
+                                </script>
+                            {%endfor%}
+
+                        <p style="font-size:14px;">
+                        <form method="post" action="">
+                            {%csrf_token%}
+                            Passport Size Photograph<br>
+                            <br>
+
+                            <font style="color:#000000; width:1000%; font-size:14px;">Name of Student :</font><br>
+                            <input
+                                style="width:60%;" type="text" name="name" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Father Name :</font><br>
+                            <input
+                                style="width:60%;" type="text" name="fname" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Mother Name :</font><br>
+                            <input
+                                style="width:60%;" type="text" name="mname" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Date of Birth :</font><br>
+                            <input type="date" id="birthday" name="birthday"><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Aadhar Number :</font><br>
+                            <input
+                                style="width:60%;" type="text" name="aadhar" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Correspondence Address :</font>
+                            <br><input style="width:60%;" type="text" name="address" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Email :</font><br><input
+                                style="width:60%;" type="text" name="email" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Mobile No :</font><br><input
+                                style="width:60%;" type="text" name="mobile" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">10th Percentage :</font><br><input
+                                style="width:60%;" type="text" name="tenth" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">12th Percentage :</font><br><input
+                                style="width:60%;" type="text" name="twelve" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Graduation Percentage :</font>
+                            <br><input style="width:60%;" type="text" name="graduation" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Post-Graduation Percentage :</font>
+                            <br><input style="width:60%;" type="text" name="pgrade" /><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Gender :</font><br><select
+                                name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Category :</font><br><select
+                                name="cat">
+                                <option value="Gender">General</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="OBC">OBC</option>
+                                <option value="Minority">Minority</option>
+                            </select><br><br>
+
+                            <font style="color:#000000; width:100%; font-size:14px;">Applying for :</font><br><select
+                                name="apply">
+                                <option value="Bachelor of Law (LLB 3 Years)">Bachelor of Law (LLB 3 Years)</option>
+                                <option value="Bachelor of Law (LLB 5 Years)">Bachelor of Law (LLB 5 Years)</option>
+                                <option value="Other Course">Other Course</option>
+                            </select><br><br>
+                            <input style="margin:0 10px" type="checkbox" name="text" required />
+
+                            <font style="color:#000000; width:100%; font-size:14px;">I certify that all entries made in
+                                this registration form are true in the best of my knowledge and belief. I fully
+                                understand that the offer of admission will be made to me depending on my interest,
+                                merit and availability of seats and verification of my original testimonials. I am
+                                willing to produce original certificates in support thereof if asked to do so at any
+                                stage during the course. I agree to abide by decisions of Institute on all matter
+                                regarding this registration form. All legal matters are subjected to Moradabad (UP)
+                                jurisdiction only.</font><br><br>
+                            <input style="margin:0 10px" type="checkbox" name="text" required />
+                            
+                            <font style="color:#000000; width:100%; font-size:14px;">I Accept terms & Conditions of
+                                Asian Law College.</font><br><br>
+                            <input type="hidden" name="data" value="1">
+
+
+                            <input type="submit" name="submit" value="Submit">
+                            <br><br><br>
+                        </form>
+                        </p>
+                    </div>
+
+                    {%endblock%}

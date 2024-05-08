@@ -1,0 +1,374 @@
+{%load static%}
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from asiancollegebilari.com/why.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 04:56:36 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ABOUT ASIAN COLLEGE</title>
+    <link href="{%static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+    <style type="text/css">
+        .lblNoticeDate1 {
+            float: right;
+        }
+
+        .order {
+            width: 30%;
+            float: right;
+
+        }
+
+        .style2 {
+            width: 236px;
+        }
+
+        .style3 {
+            width: 191px;
+        }
+
+        .style4 {
+            width: 97px;
+        }
+
+        .style10 {
+            width: 352px;
+        }
+
+        .style14 {
+            width: 392px;
+        }
+
+        .style15 {
+            width: 194px;
+        }
+
+        .style16 {
+            width: 282px;
+        }
+
+        .style17 {
+            width: 300px;
+        }
+    </style>
+    <script type="text/javascript" src="{%static 'jquery/js/jquery-1.6.4.min.js'%}"></script>
+
+    <script type="text/javascript" src="{%static 'jquery/jquery.nivo.slider.pack.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'jquery/css/nivo-slider.css'%}" type="text/css" media="screen" />
+
+
+    <script type="text/javascript">
+
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            blinkeffect('.txtblnk');
+        })
+        function blinkeffect(selector) {
+            $(selector).fadeOut('slow', function () {
+                $(this).fadeIn('slow', function () {
+                    blinkeffect(this);
+                });
+            });
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="main_wrap">
+        <div class="content">
+
+            <!--start of header part-->
+            <div class="header_area">
+                <div class="head_top">
+                    <div class="logo"><a href="/"><img src="{%static 'logo2.png'%}" alt="logo" /></a></div>
+                    <div class="right_info">
+                        <p align="right" class="phono">+91 9997986999, +91- 9807046666</p>
+                        <p align="right" class="mail">info@asianlawcollege.ac.in</p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="head_bottom">
+                    <div class="nav">
+                        <ul>
+                            <li class="hom"><a href="/"></a></li>
+                            <li><a href="#">About Us</a>
+                                <ul>
+                                    {%for i in aboutdata%}
+                                    <li><a href="/about-detail/{{i.id}}">{{i.name}}</a></li>
+                                    {%endfor%}
+                                </ul>
+                                <!-- <ul>
+                                    <li><a href="/about">About College</a></li>
+                                    <li><a href="/">Why Asian College</a></li>
+                                    <li><a href="/mission">Our Mission & Vision </a></li>
+                                    <li><a href="/principal">Principal Message</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="#">Programs</a>
+                                <ul>
+                                    {%for i in programdata%}
+                                    <li><a href="/program-detail/{{i.id}}">{{i.name}}</a></li>
+                                    {%endfor%}
+                                </ul>
+                                <!-- <ul>
+                                    <li><a href="/programs1">Bachelor of Law (LLB 3 Years)</a></li>
+                                    <li><a href="/programs2">Bachelor of Law (LLB 5 Years)</a></li>
+                                    <li><a href="/programs3">Anti-ragging Cell</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="#">Academics</a>
+                                <ul>
+                                    {%for i in academicdata%}
+                                    <li><a href="/academics-detail/{{i.id}}">{{i.name}}</a></li>
+                                    {%endfor%}
+                                </ul>
+                                <!-- <ul>
+                                    <li><a href="/academic1">Infrastructure</a></li>
+                                    <li><a href="/academic2">Fee Structure</a></li>
+                                    <li><a href="/academic3">Rules &amp; Regulations</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="#">Student Section</a>
+                                <ul>
+                                    <li><a href="/studentreg">Student Registration</a></li>
+                                    {%for i in studentdata%}
+                                    <li><a href="/student-detail/{{i.id}}">{{i.name}}</a></li>
+                                    {%endfor%}
+                                </ul>
+                                <!-- <ul>
+                                    <li><a href="/studentreg">Student Registration</a></li>
+                                    <li><a href="/studentpro">Admission Process</a></li>
+                                    <li><a href="/studentsta">Marksheet Status</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="#">Facilities</a>
+                                <ul>
+                                    {%for i in facilitydata%}
+                                    <li><a href="/facility-detail/{{i.id}}">{{i.name}}</a></li>
+                                    {%endfor%}
+                                </ul>
+                                <!-- <ul>
+                                    <li><a href="/facility1">Education Loan</a></li>
+                                    <li><a href="/facility2">Computer &amp; Internet</a></li>
+                                    <li><a href="/facility3">Moot Court</a></li>
+                                    <li><a href="/facility4">Students Common Room</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                        <div class="clr"></div>
+                    </div>
+
+
+                    <div class="banner">
+                        <div id="slider-wrapper">
+                            <div id="slider" class="nivoSlider">
+                                <img src="{%static 'banner.jp'%}g" width="100%" alt="" title="" />
+                                <img src="{%static 'banner2.j'%}pg" width="100%" alt="" title="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mid_info">
+                        <div class="info_content">
+                            <ul>
+                                <li
+                                    style="float;left; width:25%; font-size:16px; color:#ffffff; padding:2% 0 ; background-color:#008fce;">
+                                    <center><img src="{%static 'legal.png'%}" width="40px" height="40px"><a style="margin: 8px;
+    float: right;
+    padding: 0px 12px;" href="/legal-aid-cell">Legal Aid Cell</a></center>
+                                </li>
+                                <li
+                                    style="float;left; width:25%; font-size:16px; color:#ffffff; padding:2% 0; background-color:#2f2f65;">
+                                    <center><img src="{%static 'enrol.png'%}" width="40px" height="40px"><a style=" margin: 8px;
+    float: right;
+    padding: 0px 12px;" href="/studentreg">Student Registration</a></center>
+                                </li>
+                                <li
+                                    style="float;left; width:25%; font-size:16px; color:#ffffff; padding:2% 0; background-color:#008fce;">
+                                    <center><img src="{%static 'notice.pn'%}g" width="40px" height="40px"><a style=" margin: 8px;
+    float: right;
+    padding: 0px 12px;" href="/anti-ragging">Anti-Ragging Cell</a></center>
+                                </li>
+                                <li
+                                    style="float;left; width:25%; font-size:16px; color:#ffffff; padding:2% 0; background-color:#2f2f65;">
+                                    <center><img src="{%static 'ragging.p'%}ng" width="40px" height="40px"><a style="margin: 8px;
+    float: right;
+    padding: 0px 12px;" href="/notice-board">Notice Board</a></center>
+                                </li>
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of header part-->
+            <!--start of body part-->
+            <div class="area_body">
+                <div class="area_content">
+                    <div class="left_panel">
+
+                        <div class="left_info">
+                            Announcements
+                            <h2><a href="/admission">Admission</a></h2>
+                            <h2><a href="/principal-desk">Principal’s Desk</a></h2>
+                            <h2><a href="/admission-years">Admission 2022 – 2023</a></h2>
+
+
+                            <h2><a href="{{admpdata.file.url}}" style="color:#FBBD4E;"
+                                    class="txtblnk">
+                                    <blink>Admission Prospectus</blink>
+                                </a></h2>
+
+                            <h2><a href="/personal-interview">Personal Interview</a></h2>
+                            <h2><a href="/important-link">Important Links</a></h2>
+
+
+                            <h2><a target="blank" href="{{hlddata.file.url}}">Holiday
+                                    List</a></h2>
+                            <h2><a target="blank" href="https://entrance.mjpruonline.in/">Result Online </a></h2>
+                            <br><br>
+
+
+
+                        </div>
+                    </div>
+
+                    {%block body%}
+
+                    <div class="right_panel">
+
+                        <h2
+                            style="margin: 0px; padding: 0px 0px 10px 10px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma;">
+                            Why Legal Education at Asian Law College</h2>
+                        <p
+                            style="margin: 10px; padding: 0px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma; font-size: 14px;">
+                            Asian Law College has always aspired to excel in academics and has worked towards its goal
+                            to produce young lawyers who possess the intellectual genius and are morally conscious and
+                            socially responsible to ensure the rule of law.<br style="margin: 0px; padding: 0px;" />
+                            <br style="margin: 0px; padding: 0px;" />
+                            We have a dedicated team of professionals who network with various industry and corporate
+                            partners for campus placements, internships, guest lectures and leadership lectures etc. To
+                            break away from the conventional classroom teaching, students are motivated into
+                            self-learning through presentations, research, case studies, other simulation exercises.
+                            With a rich library at college, we stress upon reading and research and lead classroom
+                            teaching with discussions on judgments of various courts, social issues, latest
+                            developments, so that the students may comprehend law in an objective manner.<br
+                                style="margin: 0px; padding: 0px;" />
+                            <br style="margin: 0px; padding: 0px;" />
+                            The college has achieved this goal by getting a fine balance between classroom learning and
+                            practical expertise.
+                        </p>
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <h2
+                            style="margin: 0px; padding: 0px 0px 10px 10px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma;">
+                            CLASSROOM TEACHING</h2>
+                        <p
+                            style="margin: 10px; padding: 0px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma; font-size: 14px;">
+                            The college emphasizes on quality classroom teaching which develops legal understanding and
+                            makes students aware of their social responsibility.</p>
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <h2
+                            style="margin: 0px; padding: 0px 0px 10px 10px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma;">
+                            MOOT COURT AND MOCK TRIALS</h2>
+                        <p
+                            style="margin: 10px; padding: 0px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma; font-size: 11px;">
+                            <img src="{%static '../webcre'%}ativesolution.in/Design/latest-college/why-banner.html"
+                                width="100%" style="margin: 0px; padding: 0px; border: 0px; outline: none;" alt="" />
+                        </p>
+                        <p
+                            style="margin: 10px; padding: 0px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma; font-size: 14px;">
+                            Moot Court activities are a thrust area of the Asian Law College. The College strives to
+                            integrate the theory and practice of Law in the campus through regular moot court
+                            competitions and mock trials of cases.</p>
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <br
+                            style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: tahoma; font-size: 11px;" />
+                        <h2
+                            style="margin: 0px; padding: 0px 0px 10px 10px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma;">
+                            NEGOTIATION TRAINING SESSION</h2>
+                        <p
+                            style="margin: 10px; padding: 0px; text-align: justify; color: rgb(13, 78, 138); font-family: tahoma; font-size: 14px;">
+                            After comprehensive training, the students were assigned two cases and they were asked to
+                            prepare and present a mock negotiation session.</p>
+                        <div>&nbsp;</div>
+                    </div>
+
+                    {%endblock%}
+
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <!--end of body part-->
+
+
+            <br><br>
+            <!--start of footer part-->
+            <div class="area_body" style="background-color:#ffffff !important; margin-bottom:50px;">
+                <div style="float:left; font-size:14px; width:50%; margin:0px; padding:0px;">
+                    <center> <b> Quick Links:</b><br>
+
+
+                        <a style="color:#ffffff;" target="blank" href="https://www.mjpru.ac.in/">MJP University</a><br>
+
+
+                        <a style="color:#ffffff;" target="blank" href="http://www.barcouncilofindia.org/">Bar Council of
+                            India</a><br>
+
+
+                        <a style="color:#ffffff;" target="blank" href="https://www.ugc.ac.in/">UGC</a><br>
+
+
+                        <a style="color:#ffffff;" target="blank" href="https://www.aicte-india.org/">AICTE</a><br>
+
+
+                        <a style="color:#ffffff;" target="blank" href="http://uphed.gov.in/">Department of Higher
+                            Education, UP, UPTU</a><br>
+
+
+
+                </div>
+                <div style="float:left; width:50%;font-size:14px; margin:0px; padding:0px;">
+                    <center> <b> Get In Touch</b><br>
+                        Tel No. +91 9997986999, +91- 9807046666<br>
+                        Email: info@asiancollegebilari.com<br>
+                        Website: asiancollegebilari.com<br>
+                        Timing: Mon-Sat, 9:00am-3:00pm<br></center>
+                </div>
+            </div> <br><br><br><br><br>
+            <div class="footer_area">
+                <center>
+                    <h6>© Copyright Asian Law College. All rights reserved.</h6>
+                </center>
+                <p style="margin-bottom:30px;" align="right">Powered by : <a target="_blank"
+                        href="https://www.webcreativeindia.com/"> Web Creative Solution Private Limited</a></p>
+            </div>
+            <!--end of footer part-->
+        </div>
+    </div>
+    </form>
+    <script data-cfasync="false"
+        src="{%static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html'%}"></script>
+</body>
+
+<!-- Mirrored from asiancollegebilari.com/why.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 04:57:08 GMT -->
+
+</html>

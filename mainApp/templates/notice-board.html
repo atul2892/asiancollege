@@ -1,0 +1,30 @@
+{%extends "home.html"%}
+{%load static%}
+{%block body%}
+
+                    <div class="right_panel">
+
+                        <h2>Student Notice Board</h2>
+                        <table border="1px">
+                            <tr style="font-weight:bold; color:#ffffff; font-size:16px; background-color:gray;">
+                                <td> Ref. No.</td>
+                                <td> Details</td>
+                                <td> Date</td>
+                                <td> Downloads</td>
+
+                            </tr>
+
+                            {%for i in nbdata%}
+                            <tr>
+                                <td>{{i.ref_no}}</td>
+                                <td>{{i.details}}</td>
+                                <td>{{i.date}}</td>
+                                <td><a href="{{i.downloads.url}}"
+                                        target="_blank">Download</a></td>
+                            </tr>
+                            {%endfor%}
+
+                        </table>
+                    </div>
+
+                    {%endblock%}

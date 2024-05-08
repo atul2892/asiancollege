@@ -1,0 +1,18 @@
+{%extends "home.html"%}
+{%load static%}
+{%block body%}
+
+                    <div class="right_panel">
+
+                        <h2>Important Links</h2>
+                        <p style="font-size:14px;">
+
+                            {%for i in ildata%}
+                            <a href="{{i.link}}">{{i.name}}</a><br><br>
+                            {%endfor%}
+
+                            
+                        </p>
+                    </div>
+
+                    {%endblock%}
